@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Xentri is a specialist recruitment partner for cloud, DevOps, platform and SRE roles in the UK.">
+  <title>Xentri | Specialist Cloud, DevOps, Platform & SRE Recruitment</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="/">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span>Xentri</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+
+        <nav aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/who-we-are.html">Who we are</a>
+          <a href="/jobs/index.html">Jobs</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/who-we-are.html">Who we are</a>
+        <a href="/jobs/index.html">Jobs</a>
+        <a href="/#contact">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/gdpr.html">GDPR</a>
+      </div>
+    </div>
+  </header>
+
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="kicker">Recruitment • Contract & Permanent • UK</div>
+      <h1>Specialist recruitment for Cloud, DevOps, Platform & SRE teams.</h1>
+      <p class="lead">Xentri helps companies hire high-impact engineers and helps candidates find roles where they can do their best work.</p>
+
+      <div class="actions">
+        <a class="btn primary" href="/jobs/index.html">View jobs</a>
+        <a class="btn" href="#contact">Hire talent</a>
+        <a class="btn" href="/who-we-are.html">Who we are</a>
+      </div>
+
+      <div style="margin-top:16px" class="pill">
+        <span class="tag">Azure & AWS</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Observability</span>
+        <span class="tag">Security</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-3">
+      <div class="card card-pad">
+        <h2>For employers</h2>
+        <p>Fast shortlist, quality screening, and transparent communication. We support contract, permanent, and niche roles.</p>
+        <p class="small">Typical roles: DevOps, SRE, Platform, Cloud Security, Data/Streaming.</p>
+      </div>
+      <div class="card card-pad">
+        <h2>For candidates</h2>
+        <p>Clear role briefs, honest feedback, and roles matched to your strengths — not just keywords.</p>
+        <p class="small">We’ll never share your CV without your consent.</p>
+      </div>
+      <div class="card card-pad">
+        <h2>How it works</h2>
+        <p><strong>Brief → Shortlist → Placement.</strong> We keep the process tight and predictable.</p>
+        <p class="small">Need a role filled quickly? Ask about rapid search.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container">
+    <div class="card card-pad-lg">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:14px; flex-wrap:wrap">
+        <div>
+          <h2 style="margin-bottom:6px">Explore roles</h2>
+          <p class="small">Browse like a catalogue — filter by type, location, and tags.</p>
+        </div>
+        <div class="pill">
+          <span class="tag">Fast shortlist</span>
+          <span class="tag">Consent-first</span>
+          <span class="tag">Clear briefs</span>
+        </div>
+      </div>
+
+      <div class="catalogue" style="margin-top:14px">
+        <aside class="catalogue-filters" aria-label="Role filters">
+          <div class="filter-block">
+            <div class="filter-title">
+              <span>Search</span>
+              <button class="link-btn" id="catalogueClear" type="button">Clear</button>
+            </div>
+            <input id="catalogueSearch" class="search" type="search" placeholder="Search title, tags, summary…" autocomplete="off" />
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-title">Type</div>
+            <div class="chip-row" id="typeChips" role="list"></div>
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-title">Location</div>
+            <div class="chip-row" id="locationChips" role="list"></div>
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-title">Tags</div>
+            <div class="chip-row" id="tagChips" role="list"></div>
+          </div>
+
+          <div class="filter-block meta">
+            <div class="count">
+              <span id="catalogueCount">0</span>
+              <span class="small">results</span>
+            </div>
+            <div class="small" style="margin-top:6px">Tip: press <kbd>/</kbd> to focus search.</div>
+          </div>
+        </aside>
+
+        <section class="catalogue-results" aria-label="Role results">
+          <div class="catalogue-header">
+            <div class="view-toggle" role="group" aria-label="View toggle">
+              <button class="seg-btn is-active" data-view="grid" type="button">Grid</button>
+              <button class="seg-btn" data-view="list" type="button">List</button>
+            </div>
+
+            <div class="sort">
+              <label class="small" for="catalogueSort">Sort</label>
+              <select id="catalogueSort" class="select">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+                <option value="az">A → Z</option>
+                <option value="za">Z → A</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="jobsCatalogue" class="catalogue-grid" aria-live="polite"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2">
+    <div class="card card-pad-lg" id="contact">
+      <h2>Contact</h2>
+      <p class="small">Email is the quickest way to reach us. You can also include a job reference.</p>
+
+      <div class="card" style="margin-top:12px">
+        <div class="card-pad">
+          <div><strong>Email:</strong> <a href="mailto:contact@xentri.co.uk">contact@xentri.co.uk</a></div>
+          <div class="small" style="margin-top:8px">Replace this email with your preferred inbox when ready.</div>
+        </div>
+      </div>
+
+      <hr class="line" />
+
+      <form class="form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data">
+        <input type="hidden" name="source" value="xentri.co.uk">
+        <label>
+          Name
+          <input name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" placeholder="Tell us what you're hiring for, or what role you're looking for." required></textarea>
+        </label>
+
+        <label class="note">
+          <input type="checkbox" required>
+          I consent to Xentri processing my data for recruitment purposes in line with the Privacy Notice.
+        </label>
+
+        <button class="btn primary" type="submit">Send</button>
+        <div class="note">Tip: Replace <code>YOUR_FORM_ID</code> after creating a Formspree form.</div>
+      </form>
+    </div>
+
+    <div class="card card-pad-lg">
+      <h2>Featured jobs</h2>
+      <p class="small">Latest roles published by Xentri.</p>
+      <div id="featuredJobs"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+  // Show top 3 jobs on home
+  renderJobsList('featuredJobs');
+
+  // Catalogue-style browsing on home (projects-style layout)
+  renderJobsCatalogue({
+    targetId: 'jobsCatalogue',
+    searchId: 'catalogueSearch',
+    clearId: 'catalogueClear',
+    countId: 'catalogueCount',
+    typeChipsId: 'typeChips',
+    locationChipsId: 'locationChips',
+    tagChipsId: 'tagChips',
+    sortId: 'catalogueSort'
+  });
+</script>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2026 Xentri Ltd. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/gdpr.html">GDPR</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+      <div class="small" style="margin-top:10px">
+        Xentri is a trading name used for recruitment services. This website does not provide legal advice.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js"></script>
+</body>
+</html>

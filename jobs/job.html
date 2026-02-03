@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Job detail and application form.">
+  <title>Job | Xentri</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="/">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span>Xentri</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+
+        <nav aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/who-we-are.html">Who we are</a>
+          <a href="/jobs/index.html">Jobs</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/who-we-are.html">Who we are</a>
+        <a href="/jobs/index.html">Jobs</a>
+        <a href="/#contact">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/gdpr.html">GDPR</a>
+      </div>
+    </div>
+  </header>
+
+  
+<main class="section">
+  <div class="container grid grid-2">
+    <div id="jobDetail"></div>
+
+    <div class="card card-pad-lg">
+      <h2>Apply</h2>
+      <p class="small">Submit your details and upload a CV. We will contact you if there’s a match.</p>
+
+      <form class="form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data">
+        <input type="hidden" name="source" value="xentri.co.uk">
+        <input type="hidden" name="job_ref" value="">
+        <input type="hidden" name="job_title" value="">
+
+        <label>
+          Full name
+          <input name="name" autocomplete="name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+
+        <label>
+          Phone
+          <input name="phone" autocomplete="tel">
+        </label>
+
+        <label>
+          LinkedIn (optional)
+          <input name="linkedin" placeholder="https://www.linkedin.com/in/…">
+        </label>
+
+        <label>
+          Right to work in the UK?
+          <select name="right_to_work" required>
+            <option value="" selected disabled>Select…</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>Require sponsorship</option>
+          </select>
+        </label>
+
+        <label>
+          CV (PDF/DOC)
+          <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+        </label>
+
+        <label>
+          Notes (optional)
+          <textarea name="notes" placeholder="Any key details, availability, rates, etc."></textarea>
+        </label>
+
+        <label class="note">
+          <input type="checkbox" required>
+          I consent to Xentri processing my data for recruitment purposes in line with the Privacy Notice.
+        </label>
+
+        <button class="btn primary" type="submit">Submit application</button>
+        <div class="note">Replace <code>YOUR_FORM_ID</code> with your Formspree endpoint.</div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<script>
+  renderJobDetail('jobDetail');
+</script>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2026 Xentri Ltd. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/gdpr.html">GDPR</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+      <div class="small" style="margin-top:10px">
+        Xentri is a trading name used for recruitment services. This website does not provide legal advice.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js"></script>
+</body>
+</html>

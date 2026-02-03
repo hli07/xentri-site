@@ -1,0 +1,58 @@
+[
+  {
+    "ref": "XEN-DEVOPS-001",
+    "title": "Senior DevOps Engineer (Contract)",
+    "location": "London / Hybrid",
+    "type": "Contract",
+    "salary": "\u00a3600\u2013\u00a3700/day",
+    "posted": "2026-02-03",
+    "tags": [
+      "Azure",
+      "Kubernetes",
+      "GitHub Actions",
+      "Terraform"
+    ],
+    "summary": "Own platform automation and delivery for cloud-native microservices.",
+    "description": "You will work with engineering teams to improve delivery speed, reliability, and security across cloud infrastructure and CI/CD.",
+    "responsibilities": [
+      "Build and maintain CI/CD pipelines using GitHub Actions",
+      "Operate and improve Kubernetes platform reliability",
+      "Implement IaC (Terraform/Bicep) and policy-as-code",
+      "Collaborate with stakeholders to define platform standards"
+    ],
+    "requirements": [
+      "Strong experience with Azure and Kubernetes",
+      "Hands-on CI/CD and IaC experience",
+      "Good communication and stakeholder management",
+      "Security-first mindset"
+    ]
+  },
+  {
+    "ref": "XEN-SRE-002",
+    "title": "Site Reliability Engineer",
+    "location": "UK (Remote)",
+    "type": "Permanent",
+    "salary": "\u00a380k\u2013\u00a3110k",
+    "posted": "2026-02-03",
+    "tags": [
+      "SRE",
+      "Observability",
+      "Incident Response",
+      "Reliability"
+    ],
+    "summary": "Improve reliability through observability, automation, and operational excellence.",
+    "description": "You will define SLOs, evolve monitoring/alerting, and help teams reduce toil through pragmatic automation.",
+    "responsibilities": [
+      "Define and track SLOs/SLIs",
+      "Improve observability (logs/metrics/traces)",
+      "Run incident response and post-incident reviews",
+      "Automate operational workflows"
+    ],
+    "requirements": [
+      "Experience in SRE/production operations",
+      "Strong observability and troubleshooting skills",
+      "Comfortable with scripting and automation",
+      "Able to work with multiple teams"
+    ]
+  }
+]

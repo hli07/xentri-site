@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="View current jobs being recruited by Xentri.">
+  <title>Jobs | Xentri</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="/">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span>Xentri</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+
+        <nav aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/who-we-are.html">Who we are</a>
+          <a href="/jobs/index.html">Jobs</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="/">Home</a>
+        <a href="/who-we-are.html">Who we are</a>
+        <a href="/jobs/index.html">Jobs</a>
+        <a href="/#contact">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/gdpr.html">GDPR</a>
+      </div>
+    </div>
+  </header>
+
+  
+<main class="section">
+  <div class="container">
+    <div class="card card-pad-lg">
+      <h2>Jobs</h2>
+      <p class="small">Roles currently being recruited by Xentri. Apply directly on each job page.</p>
+    </div>
+    <div style="height:14px"></div>
+    <div id="jobsList"></div>
+  </div>
+</main>
+
+<script>
+  renderJobsList('jobsList');
+</script>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2026 Xentri Ltd. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/gdpr.html">GDPR</a>
+        <a href="/cookies.html">Cookies</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+      <div class="small" style="margin-top:10px">
+        Xentri is a trading name used for recruitment services. This website does not provide legal advice.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js"></script>
+</body>
+</html>
